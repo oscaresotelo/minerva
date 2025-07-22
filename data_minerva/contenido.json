@@ -1,0 +1,43 @@
+{
+    "slider": [
+        {
+            "titulo": "Shampoo Nutritivo",
+            "descripcion": "Cuida tu cabello con ingredientes naturales para una hidrataci\u00f3n profunda.",
+            "imagen": "data_minerva\\images\\slider1.jpeg"
+        },
+        {
+            "titulo": "Acondicionador Reparador",
+            "descripcion": "Repara y fortalece tu cabello para un brillo saludable y duradero.",
+            "imagen": "data_minerva\\images\\slider2.jpeg"
+        },
+        {
+            "titulo": "Mascarilla Hidratante",
+            "descripcion": "Repara y nutre profundamente para un cabello suave y manejable.",
+            "imagen": "data_minerva\\images\\slider3.jpeg"
+        }
+    ],
+    "productos": [
+        {
+            "nombre": "Shampoo Nutritivo",
+            "descripcion": "F\u00f3rmula suave con aceites naturales para cuidar tu cabello.",
+            "imagen": "data_minerva\\images\\producto1.jpeg"
+        },
+        {
+            "nombre": "Acondicionador Reparador",
+            "descripcion": "Repara y fortalece el cabello da\u00f1ado con ingredientes naturales.",
+            "imagen": "data_minerva\\images\\producto2.jpeg"
+        },
+        {
+            "nombre": "Mascarilla Hidratante",
+            "descripcion": "Nutre intensamente para un cabello suave y brillante.",
+            "imagen": "data_minerva\\images\\producto3.jpeg"
+        }
+    ],
+    "beneficios": [
+        "F\u00f3rmulas naturales y libres de parabenos.",
+        "Resultados visibles desde la primera aplicaci\u00f3n.",
+        "Apto para todo tipo de cabello.",
+        "Productos dermatol\u00f3gicamente probados."
+    ],
+    "logo": "data_minerva\\images\\logo.jpeg"
+}
