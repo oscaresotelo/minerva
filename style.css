@@ -12,241 +12,234 @@ body {
 }
 
 /* Ocultar elementos por defecto de Streamlit que no necesitamos */
-/* NOTA: Si necesitas el menú de Streamlit (el de la hamburguesa), haz #MainMenu { visibility: visible; } */
 #MainMenu { visibility: visible; }
 header { visibility: visible; background-color: transparent; height: 2.875rem; box-shadow: none; }
-footer { visibility: hidden; height: 0; } /* Oculta el footer de Streamlit */
-.stApp { padding-top: 0rem; } /* Elimina el padding superior por defecto de Streamlit */
+footer { visibility: hidden; height: 0; }
+.stApp { padding-top: 0rem; }
 
 
 /* Custom Header (for your logo and title) */
 .main-header-content {
     background-color: #ffffff;
-    padding: 1rem 0; /* Padding superior e inferior para espacio */
-    border-bottom: 1px solid #eee; /* Línea sutil para separación visual */
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
     text-align: center;
     position: relative;
-    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    z-index: 1000;
     display: flex;
-    flex-direction: column; /* Apila logo y título verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil para profundidad */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .main-header-content img {
-    max-width: 150px; /* Tamaño máximo del logo en escritorio */
+    max-width: 150px;
     height: auto;
-    margin-bottom: 0.5rem; /* Espacio entre el logo y el título */
+    margin-bottom: 0.5rem;
 }
 
 .app-title {
     font-family: 'Roboto', sans-serif;
-    color: #005f56; /* Verde oscuro para el título principal, sofisticado */
-    font-size: 2.8em; /* Título grande y atractivo para escritorio */
-    font-weight: 700; /* Negrita para impacto */
+    color: #005f56; /* Verde oscuro */
+    font-size: 2.8em;
+    font-weight: 700;
     text-align: center;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.02em; /* Ligero ajuste para elegancia en el espaciado de letras */
-    white-space: normal; /* Permite que el texto se envuelva en varias líneas si no hay espacio */
-    word-break: break-word; /* Rompe palabras largas si es necesario para evitar desbordamiento */
+    letter-spacing: -0.02em;
+    white-space: normal;
+    word-break: break-word;
 }
 
 /* Streamlit Sidebar Styling */
 [data-testid="stSidebar"] {
-    background-color: #008C82; /* Color de marca principal para el sidebar */
-    color: white; /* Color de texto predeterminado para el sidebar */
+    background-color: #008C82; /* Color de marca */
+    color: white;
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para dar efecto de profundidad al sidebar */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .sidebar-container {
-    padding-bottom: 20px; /* Asegura un buen padding inferior en el sidebar */
+    padding-bottom: 20px;
 }
 
 .sidebar-header h3 {
-    color: white; /* Color blanco para el título del sidebar */
+    color: white;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Estilo para los botones de radio (opciones de navegación del sidebar) */
 [data-testid="stRadio"] label {
     display: flex;
     align-items: center;
-    padding: 12px 18px; /* Más padding para botones más grandes y fáciles de tocar */
+    padding: 12px 18px;
     margin-bottom: 5px;
-    border-radius: 8px; /* Bordes suaves para los botones */
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al interactuar */
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: bold;
-    color: #f0f0f0; /* Color del texto del menú inactivo (gris muy claro) */
+    color: #f0f0f0;
 }
 
 [data-testid="stRadio"] label:hover {
-    background-color: #007066; /* Verde más oscuro al pasar el ratón */
-    color: white; /* Texto blanco al pasar el ratón */
+    background-color: #007066;
+    color: white;
 }
 
-/* Ajusta el párrafo dentro de la etiqueta del radio (donde Streamlit renderiza el texto) */
 [data-testid="stRadio"] label > div[data-testid="stMarkdownContainer"] p {
-    margin: 0; /* Elimina el margen predeterminado del párrafo */
-    font-size: 1.1em; /* Tamaño de fuente ligeramente más grande */
+    margin: 0;
+    font-size: 1.1em;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Estilo para el elemento de radio seleccionado (cuando una opción está activa) */
-/* Selector complejo para el div que contiene el input de radio cuando está checked */
 [data-testid="stRadio"] label div.st-cr.st-bs[role="radiogroup"] > div:has(input:checked) {
-    background-color: #007066; /* Color del elemento seleccionado (verde oscuro) */
-    color: white; /* Texto blanco para el elemento seleccionado */
+    background-color: #007066;
+    color: white;
     border-radius: 8px;
 }
 
-/* Asegura que el texto del elemento de radio seleccionado sea blanco */
 [data-testid="stRadio"] label div.st-cr.st-bs[role="radiogroup"] > div:has(input:checked) p {
-    color: white !important; /* ¡Forzar el color blanco para el texto seleccionado! */
+    color: white !important;
 }
 
-/* Oculta el input de radio nativo de HTML para usar el estilo personalizado de Streamlit/CSS */
 [data-testid="stRadio"] .st-bs input[type="radio"] {
     display: none;
 }
 
-/* Hero Section / Main Banner (Sección principal de bienvenida) */
+/* Hero Section / Main Banner */
 .hero-section {
-    background-color: #e0f7fa; /* Fondo claro y fresco (azul verdoso muy suave) */
-    /* Patrón de fondo sutil para un toque natural */
-    background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23cbe6ed" opacity="0.4"><circle cx="50" cy="50" r="40"/><circle cx="20" cy="80" r="25"/><circle cx="80" cy="20" r="30"/></g></svg>');
+    background-color: #e0f7fa; /* Fondo claro y fresco */
+    /* Patrón de fondo sutil con ligera opacidad para no competir con el texto */
+    background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23cbe6ed" opacity="0.6"><circle cx="50" cy="50" r="40"/><circle cx="20" cy="80" r="25"/><circle cx="80" cy="20" r="30"/></g></svg>'); /* Increased opacity slightly for more visibility */
     background-size: cover;
-    padding: 40px; /* Amplio padding para airear en escritorio */
-    border-radius: 15px; /* Bordes más suaves y modernos */
+    padding: 40px;
+    border-radius: 15px;
     margin-bottom: 40px;
-    display: flex; /* Utiliza flexbox para alinear contenido */
-    align-items: center; /* Centra verticalmente los ítems en el contenedor flex */
-    gap: 40px; /* Espacio entre los elementos flex (texto y carrusel) */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para un efecto elevado */
-    overflow: hidden; /* Importante para que ningún contenido se desborde */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
 .hero-text-content {
-    flex: 1; /* Permite que este div ocupe el espacio disponible */
-    text-align: left; /* Alinea el texto a la izquierda en escritorio */
-    color: #444; /* Color de texto base para descripciones en esta sección */
+    flex: 1;
+    text-align: left;
+    color: #444; /* Color de texto base para descripciones */
 }
 
 .hero-title {
-    color: #005f56; /* Color específico para el título hero (verde oscuro) */
-    font-size: 3em; /* Título hero más grande y prominente */
+    color: #005f56;
+    font-size: 3em;
     margin-bottom: 15px;
-    line-height: 1.2; /* Espaciado entre líneas */
-    font-weight: 700; /* Negrita */
-    word-break: break-word; /* Rompe palabras largas si es necesario */
-    white-space: normal; /* Permite que el texto se envuelva */
+    line-height: 1.2;
+    font-weight: 700;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .hero-subtitle {
-    color: #00796b; /* Color específico para el subtítulo hero (verde medio) */
-    font-size: 1.5em; /* Subtítulo impactante */
+    color: #00796b;
+    font-size: 1.5em;
     margin-bottom: 20px;
-    font-weight: 500; /* Peso de fuente medio */
+    font-weight: 500;
     word-break: break-word;
     white-space: normal;
 }
 
 .hero-description {
-    color: #444; /* Color para la descripción */
-    line-height: 1.7; /* Buen espaciado de línea para legibilidad */
+    color: #444;
+    line-height: 1.7;
     font-size: 1.1em;
     margin-bottom: 30px;
     word-break: break-word;
     white-space: normal;
 }
 
-/* Estilos para todas las cards (producto, beneficio, testimonio, etc.) */
+/* Estilos para todas las cards */
 .product-card, .news-card, .contact-form-card, .contact-info-card, .about-section-card, .benefit-card, .testimonial-card {
-    background-color: #ffffff; /* Fondo blanco para las tarjetas */
-    padding: 25px; /* Más padding interno */
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más definida */
-    margin-bottom: 25px; /* Espacio entre tarjetas */
-    text-align: center; /* Centra el contenido de la tarjeta */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animación suave al interactuar */
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .product-card:hover, .benefit-card:hover, .testimonial-card:hover {
-    transform: translateY(-5px); /* Efecto flotante al pasar el ratón */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al flotar */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .product-card h4, .news-card h3, .benefit-card h4 {
-    color: #008C82; /* Color de título dentro de las tarjetas */
+    color: #008C82;
     margin-top: 15px;
     margin-bottom: 10px;
-    font-weight: 600; /* Negrita semi-bold */
+    font-weight: 600;
 }
 
 .product-price {
     font-weight: bold;
-    color: #007066; /* Verde un poco más oscuro para el precio */
+    color: #007066;
     font-size: 1.2em;
     margin-bottom: 15px;
 }
 
-/* Títulos y Descripciones de Sección (para "¿Por qué elegir Minerva?", "Nuestras Líneas", etc.) */
+/* Títulos y Descripciones de Sección */
 .section-title {
     font-family: 'Roboto', sans-serif;
-    color: #005f56; /* Verde oscuro */
+    color: #005f56;
     text-align: center;
-    margin-top: 50px; /* Más espacio superior */
+    margin-top: 50px;
     margin-bottom: 15px;
-    font-size: 2.5em; /* Títulos de sección grandes */
+    font-size: 2.5em;
     font-weight: 700;
 }
 
 .section-description {
     text-align: center;
-    color: #555; /* Gris oscuro */
-    margin-bottom: 40px; /* Más espacio inferior */
-    max-width: 900px; /* Limita el ancho para legibilidad */
-    margin-left: auto; /* Centra el bloque de descripción */
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
     margin-right: auto;
     font-size: 1.1em;
     line-height: 1.6;
 }
 
-/* Espacios entre secciones para mejor organización visual */
+/* Espacios entre secciones */
 .section-spacer {
-    height: 60px; /* Espacio grande entre secciones */
+    height: 60px;
 }
 
 .section-spacer-small {
-    height: 30px; /* Espacio más pequeño */
+    height: 30px;
 }
 
-/* Estilo de los botones generales */
+/* Estilo de los botones */
 div.stButton > button {
-    background-color: #008C82; /* Color de marca para botones */
-    color: white; /* Texto blanco en los botones */
-    padding: 12px 25px; /* Más padding para un mejor Call-to-Action */
-    border: none; /* Sin borde */
-    border-radius: 8px; /* Bordes suaves */
-    cursor: pointer; /* Indica que es clickeable */
+    background-color: #008C82;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Animaciones suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 div.stButton > button:hover {
-    background-color: #007066; /* Verde más oscuro al pasar el ratón */
-    transform: translateY(-2px); /* Pequeño efecto de "levantar" */
+    background-color: #007066;
+    transform: translateY(-2px);
 }
 
-/* CTA Banner Final (al final de Home, una sección de llamado a la acción prominente) */
+/* CTA Banner Final */
 .cta-banner-final {
     background-color: #c8e6c9; /* Un verde claro más cálido */
     padding: 50px;
@@ -254,33 +247,33 @@ div.stButton > button:hover {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra suave */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .cta-banner-final .cta-title {
-    color: #005f56; /* Verde oscuro */
+    color: #005f56;
     font-size: 2.8em;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .cta-banner-final .cta-description {
-    color: #444; /* Gris oscuro */
+    color: #444;
     font-size: 1.2em;
     margin-bottom: 30px;
     line-height: 1.6;
 }
 
 .cta-banner-final .cta-button {
-    background-color: #008C82; /* Verde de marca */
+    background-color: #008C82;
     color: white;
-    padding: 18px 35px; /* Botón CTA grande y prominente */
+    padding: 18px 35px;
     border: none;
     border-radius: 10px;
     font-size: 1.4em;
     font-weight: bold;
-    text-decoration: none; /* Asegura que no tenga subrayado si es un enlace */
-    display: inline-block; /* Permite aplicar padding y transformaciones */
+    text-decoration: none;
+    display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -293,10 +286,10 @@ div.stButton > button:hover {
 
 /* Estilos específicos para Novedades (News Card) */
 .news-card {
-    display: flex; /* Utiliza flexbox para alinear imagen y texto */
-    gap: 25px; /* Espacio entre los elementos flex */
-    text-align: left; /* Alinea el texto a la izquierda dentro de la tarjeta */
-    align-items: flex-start; /* Alinea los elementos al principio de la cruz (verticalmente) */
+    display: flex;
+    gap: 25px;
+    text-align: left;
+    align-items: flex-start;
     background-color: #ffffff;
     padding: 25px;
     border-radius: 12px;
@@ -311,15 +304,15 @@ div.stButton > button:hover {
 }
 
 .news-card img {
-    border-radius: 8px; /* Bordes suaves para imágenes */
-    max-width: 180px; /* Tamaño un poco más grande para imagen de novedad */
-    height: 120px; /* Altura fija para consistencia en el layout */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 8px;
+    max-width: 180px;
+    height: 120px;
+    object-fit: cover;
 }
 
 .news-card h3 {
     margin-top: 0;
-    color: #005f56; /* Color de título de la novedad */
+    color: #005f56;
     font-size: 1.6em;
 }
 
@@ -329,28 +322,28 @@ div.stButton > button:hover {
 }
 
 .news-card caption {
-    color: #888; /* Color para el pie de foto/fecha */
+    color: #888;
     font-size: 0.9em;
 }
 
 /* Estilos para Contacto */
 .contact-form-card, .contact-info-card {
-    text-align: left; /* Alinea el texto a la izquierda en estas tarjetas */
-    padding: 30px; /* Más padding */
+    text-align: left;
+    padding: 30px;
 }
 
 .contact-info-card p strong {
-    color: #008C82; /* Color de marca para texto importante */
+    color: #008C82;
 }
 
 .contact-info-card a {
-    color: #008C82; /* Color de marca para enlaces */
+    color: #008C82;
     text-decoration: none;
     font-weight: bold;
 }
 
 .contact-info-card a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón */
+    text-decoration: underline;
 }
 
 /* Estilos para Sobre Nosotros */
@@ -366,8 +359,8 @@ div.stButton > button:hover {
 }
 
 .about-section-card ul {
-    list-style-type: disc; /* Vuelvo a los puntos para las listas desordenadas */
-    padding-left: 20px; /* Indentación de la lista */
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .about-section-card li {
@@ -386,49 +379,49 @@ div.stButton > button:hover {
 }
 
 .benefit-icon {
-    width: 60px; /* Tamaño del icono */
+    width: 60px;
     height: 60px;
     margin-bottom: 15px;
-    object-fit: contain; /* Asegura que el icono se ajuste sin ser recortado */
+    object-fit: contain;
 }
 
 .benefit-card h4 {
-    color: #005f56; /* Verde oscuro para el título del beneficio */
+    color: #005f56;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .benefit-card p {
-    color: #666; /* Gris más claro para descripciones de beneficios */
+    color: #666;
     font-size: 0.95em;
     line-height: 1.5;
 }
 
 /* Nuevo: Sección de Testimonios */
 .testimonial-card {
-    background-color: #eff8f0; /* Fondo más suave para testimonios (verde muy claro) */
+    background-color: #eff8f0; /* Fondo más suave para testimonios */
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
-    display: flex; /* Utiliza flexbox para organizar contenido */
-    flex-direction: column; /* Apila los elementos verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    min-height: 280px; /* Altura mínima para que las tarjetas sean uniformes */
-    justify-content: space-between; /* Distribuye el espacio entre el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 280px;
+    justify-content: space-between;
 }
 
 .testimonial-card img {
     width: 90px;
     height: 90px;
-    border-radius: 50%; /* Avatar redondo */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio */
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #008C82; /* Borde de marca para el avatar */
+    border: 3px solid #008C82;
 }
 
-.testimonial-avatar-fallback { /* Estilo para un avatar de respaldo si no hay imagen */
+.testimonial-avatar-fallback {
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -443,8 +436,8 @@ div.stButton > button:hover {
 }
 
 .testimonial-quote {
-    font-style: italic; /* Cita en cursiva */
-    color: #444; /* Gris oscuro para el texto de la cita */
+    font-style: italic;
+    color: #444;
     font-size: 1.1em;
     margin-bottom: 15px;
     line-height: 1.6;
@@ -452,11 +445,11 @@ div.stButton > button:hover {
 
 .testimonial-author {
     font-weight: bold;
-    color: #007066; /* Verde oscuro para el autor */
+    color: #007066;
     font-size: 1em;
 }
 
-/* Nuevo: Sección de Lead Form (Formulario de contacto/captura de leads) */
+/* Nuevo: Sección de Lead Form */
 .lead-form-section {
     background-color: #008C82; /* Color de marca fuerte para esta sección */
     padding: 50px;
@@ -464,35 +457,32 @@ div.stButton > button:hover {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra más pronunciada */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .lead-form-section h2, .lead-form-section p {
-    color: white !important; /* Asegura que el texto dentro de esta sección sea blanco */
+    color: white !important;
 }
 
-/* Estilo para los inputs de texto dentro del formulario */
 .lead-form-section div.stTextInput > div > div > input {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para inputs */
-    color: #333; /* Color de texto dentro del input */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px 15px;
 }
 
-/* Estilo para las etiquetas de los inputs */
 .lead-form-section div.stTextInput > label {
-    color: white; /* Etiquetas de input en blanco */
+    color: white;
     font-weight: bold;
 }
 
-/* Estilo para el texto del checkbox */
 .lead-form-section div.stCheckbox > label {
-    color: white; /* Texto del checkbox en blanco */
+    color: white;
     font-size: 0.9em;
 }
 
-/* Nuevo: FAQ Section (Preguntas Frecuentes) */
+/* Nuevo: FAQ Section */
 .faq-section {
     background-color: #ffffff;
     padding: 30px;
@@ -501,8 +491,7 @@ div.stButton > button:hover {
     margin-top: 30px;
 }
 
-/* Estilo para los "expanders" de Streamlit usados en las FAQs */
-.faq-section .st-emotion-cache-1pxnc8x { /* Selector específico para el contenedor del expander */
+.faq-section .st-emotion-cache-1pxnc8x {
     background-color: #f0fafa !important; /* Un fondo ligeramente diferente para cada FAQ */
     border-radius: 8px;
     margin-bottom: 10px;
@@ -514,10 +503,10 @@ div.stButton > button:hover {
 }
 
 .faq-section .st-emotion-cache-1pxnc8x:hover {
-    background-color: #d8f4f4 !important; /* Color de fondo al pasar el ratón */
+    background-color: #d8f4f4 !important;
 }
 
-.faq-section .st-emotion-cache-1pxnc8x p { /* El contenido dentro del expander */
+.faq-section .st-emotion-cache-1pxnc8x p {
     color: #555;
     line-height: 1.6;
 }
@@ -525,124 +514,135 @@ div.stButton > button:hover {
 
 /* --- Media Queries para Responsive Design (Ajustes para Móviles y Tablets) --- */
 
-/* Estilos aplicados cuando el ancho de la pantalla es de 768px o menos */
 @media (max-width: 768px) {
     /* Ajustes generales para tablets y móviles */
     body {
-        font-size: 0.95em; /* Ligeramente más pequeño el texto base para ahorrar espacio */
+        font-size: 0.95em;
     }
 
     /* Header y Título Principal (Minerva Productos Capilares) */
     .main-header-content {
-        padding: 0.8rem 10px; /* Más padding horizontal para que el contenido no se pegue a los bordes */
+        padding: 0.8rem 10px;
+        background-color: #ffffff !important; /* Asegura un fondo blanco para el header */
     }
 
     .main-header-content img {
-        max-width: 100px; /* Reduce el tamaño del logo en móvil */
-        margin-bottom: 0.2rem; /* Menor margen entre logo y título */
+        max-width: 100px;
+        margin-bottom: 0.2rem;
     }
 
     .app-title {
-        font-size: 1.8em; /* Reduce el tamaño de la fuente para que quepa bien */
+        font-size: 1.8em;
         line-height: 1.2;
         margin-top: 0.3rem;
         margin-bottom: 0.3rem;
         padding: 0 5px;
-        color: #005f56 !important; /* ¡FUERZA EL COLOR VERDE OSCURO para el título principal! */
+        color: #005f56 !important;
     }
 
-    /* Hero Section - CRÍTICO PARA LA VISIBILIDAD EN MÓVIL */
+    /* Hero Section - Foco en el contraste de fondo/texto */
     .hero-section {
-        flex-direction: column; /* Apila los elementos (texto y carrusel) verticalmente */
-        text-align: center; /* Centra el texto */
-        padding: 30px 20px; /* Ajustar padding para pantallas más pequeñas */
-        gap: 20px; /* Menos espacio entre elementos apilados */
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+        background-color: #e6f7f5 !important; /* Ligeramente más verdoso y oscuro para más contraste */
+        /* Si el patrón de fondo sigue molestando, puedes ocultarlo en móvil: */
+        /* background-image: none !important; */
     }
 
     .hero-text-content {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        order: 2; /* Mueve el texto debajo del carrusel en móvil para mejor flujo */
-        text-align: center; /* Centrar el texto en móvil */
+        width: 100%;
+        order: 2;
+        text-align: center;
     }
 
     .hero-title {
-        font-size: 2em; /* Reducir aún más el tamaño del título hero */
+        font-size: 2em;
         line-height: 1.3;
-        color: #005f56 !important; /* **¡FUERZA EL COLOR VERDE OSCURO para el título hero!** */
+        color: #005f56 !important;
         margin-bottom: 10px;
     }
 
     .hero-subtitle {
-        font-size: 1.1em; /* Reducir el tamaño del subtítulo hero */
+        font-size: 1.1em;
         line-height: 1.4;
-        color: #00796b !important; /* **¡FUERZA EL COLOR VERDE MEDIO para el subtítulo hero!** */
+        color: #00796b !important;
         margin-bottom: 15px;
     }
 
     .hero-description {
         font-size: 0.95em;
         line-height: 1.5;
-        color: #444 !important; /* **¡FUERZA EL COLOR GRIS OSCURO para la descripción hero!** */
+        color: #444 !important;
         margin-bottom: 20px;
     }
 
-    /* Carrusel en móvil - CRÍTICO PARA LA VISIBILIDAD Y LAYOUT */
-    /* Selector común de Streamlit para el contenedor del carrusel.
-       Si no funciona, usa el inspector de elementos para encontrar el correcto en tu app. */
+    /* Carrusel en móvil */
     [data-testid="stCarousel"] {
-        width: 100% !important; /* Asegura que el carrusel ocupe todo el ancho disponible */
-        max-width: 400px; /* Limita el ancho máximo para que no sea excesivamente grande en tablets */
-        margin: 0 auto 20px auto; /* Centra el carrusel y añade margen inferior */
-        order: 1; /* Mueve el carrusel encima del texto en móvil */
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+        order: 1;
     }
     
-    /* Ajustes generales de títulos y descripciones de sección (¿Por qué elegir Minerva?, Nuestras Líneas, etc.) */
+    /* Títulos y Descripciones de Sección */
     .section-title {
-        font-size: 2em; /* Reduce el tamaño */
+        font-size: 2em;
         margin-top: 30px;
         margin-bottom: 10px;
-        color: #005f56 !important; /* ¡FUERZA EL COLOR VERDE OSCURO! */
-        text-align: center !important; /* Asegura el centrado */
-        word-break: break-word; /* Permite que el texto se rompa */
+        color: #005f56 !important;
+        text-align: center !important;
+        word-break: break-word;
         white-space: normal;
     }
 
     .section-description {
-        font-size: 0.95em; /* Reduce el tamaño */
+        font-size: 0.95em;
         margin-bottom: 20px;
-        color: #555 !important; /* ¡FUERZA EL COLOR GRIS OSCURO! */
-        text-align: center !important; /* Asegura el centrado */
+        color: #555 !important;
+        text-align: center !important;
         word-break: break-word;
         white-space: normal;
     }
 
     .section-spacer {
-        height: 40px; /* Reduce espacio en móvil */
+        height: 40px;
     }
 
     .section-spacer-small {
         height: 20px;
     }
 
-    /* Cards de productos, beneficios, testimonios, noticias, etc. */
-    .product-card, .benefit-card, .testimonial-card, .news-card, .contact-form-card, .contact-info-card, .about-section-card {
-        padding: 15px; /* Reduce el padding interno de las cards */
-        margin-bottom: 15px; /* Reduce el margen entre cards */
+    /* Cards de productos */
+    .product-card, .news-card, .benefit-card, .testimonial-card, .contact-form-card, .contact-info-card, .about-section-card {
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #ffffff !important; /* Asegura un fondo blanco para todas las cards */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08) !important; /* Sombra más suave en móvil */
     }
     
-    /* Si "Línea Profesional Minerva: Resultados de Salón en Casa" es un h3 o h4 dentro de un card */
-    .product-card h4, .news-card h3, .benefit-card h4 {
-        font-size: 1.2em; /* Ajustar tamaño para móvil */
-        color: #008C82 !important; /* **¡FUERZA EL COLOR!** */
+    .product-card h4 {
+        font-size: 1.2em;
+        color: #008C82 !important;
+        word-break: break-word;
+        white-space: normal;
     }
-    /* Si el texto de descripción de la línea es un párrafo dentro de un card */
-    .product-card p, .benefit-card p {
-        font-size: 0.9em; /* Ajustar tamaño para móvil */
-        color: #666 !important; /* **¡FUERZA EL COLOR!** */
+
+    .product-price {
+        font-size: 1.1em;
+        color: #007066 !important;
+    }
+
+    div.stButton > button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+        color: white !important;
+        background-color: #008C82 !important;
     }
 
     .testimonial-card img {
-        width: 70px; /* Reduce el tamaño del avatar de testimonio */
+        width: 70px;
         height: 70px;
     }
 
@@ -650,9 +650,9 @@ div.stButton > button:hover {
         font-size: 1em;
     }
 
-    /* Lead form (formulario de contacto) */
+    /* Lead form */
     .lead-form-section {
-        padding: 30px 20px; /* Ajusta padding */
+        padding: 30px 20px;
     }
 
     .lead-form-section div.stTextInput > div > div > input {
@@ -670,7 +670,7 @@ div.stButton > button:hover {
         padding: 15px 25px;
     }
     
-    /* Sidebar (menú de navegación) */
+    /* Sidebar */
     [data-testid="stRadio"] label {
         padding: 8px 10px;
         font-size: 0.9em;
@@ -678,18 +678,27 @@ div.stButton > button:hover {
     [data-testid="stRadio"] label > div[data-testid="stMarkdownContainer"] p {
         font-size: 0.9em;
     }
+
+    /* Footer */
+    .footer-content {
+        text-align: center;
+        padding: 20px 10px;
+        background-color: #e6e6e6 !important; /* Fondo del footer un poco más oscuro para contraste */
+        color: #444 !important; /* Texto del footer un poco más oscuro */
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
 }
 
-/* Estilos aplicados cuando el ancho de la pantalla es de 480px o menos (teléfonos muy pequeños) */
 @media (max-width: 480px) {
     /* Ajustes aún más pequeños para teléfonos muy compactos */
     .app-title {
-        font-size: 1.5em; /* Podría necesitar ser aún más pequeño */
-        color: #005f56 !important; /* ¡FUERZA EL COLOR TAMBIÉN AQUÍ para el título principal! */
+        font-size: 1.5em;
+        color: #005f56 !important;
     }
 
     .hero-title {
-        font-size: 1.6em; /* Más pequeño para pantallas muy estrechas */
+        font-size: 1.6em;
     }
 
     .hero-subtitle {
@@ -703,70 +712,10 @@ div.stButton > button:hover {
     .cta-banner-final .cta-title {
         font-size: 1.6em;
     }
-}
-/* ... (todo tu CSS anterior hasta las media queries) ... */
 
-
-/* --- Media Queries para Responsive Design (Ajustes para Móviles y Tablets) --- */
-
-/* Estilos aplicados cuando el ancho de la pantalla es de 768px o menos */
-@media (max-width: 768px) {
-    /* ... (tus ajustes anteriores para header, app-title, hero-section, section-title, section-description) ... */
-
-    /* Cards de productos (Acondicionador Brillo Sedoso, Máscara Reparadora Profunda) */
-    .product-card {
-        padding: 15px; /* Reduce el padding interno de las cards */
-        margin-bottom: 15px; /* Reduce el margen entre cards */
-    }
-
-    /* Título del producto dentro de la tarjeta (e.g., "Acondicionador Brillo Sedoso") */
-    .product-card h4 {
-        font-size: 1.2em; /* Ajustar tamaño para móvil */
-        color: #008C82 !important; /* **¡FUERZA EL COLOR VERDE DE MARCA!** */
-        word-break: break-word; /* Asegura que el nombre se rompa si es muy largo */
-        white-space: normal;
-    }
-
-    /* Precio del producto (e.g., "AR$ 3.200") */
-    .product-price {
-        font-size: 1.1em; /* Ajustar tamaño para móvil */
-        color: #007066 !important; /* **¡FUERZA EL COLOR VERDE OSCURO!** */
-    }
-
-    /* Texto "Ver Detalles" (asumo que es un botón o parte de un botón) */
-    div.stButton > button {
-        /* Ya tiene un color de fondo y de texto explícito.
-           Si el texto del botón no se ve, podría ser por el background-color
-           de un elemento padre o superposición. Aseguramos el color del texto. */
-        font-size: 0.9em; /* Ajustar tamaño para móvil */
-        padding: 10px 20px;
-        color: white !important; /* **¡FUERZA EL COLOR BLANCO EN EL BOTÓN!** */
-        background-color: #008C82 !important; /* Reafirmar el color de fondo también */
-    }
-
-
-    /* Footer (© 2025 Minerva Productos Capilares. Todos los derechos reservados. Hecho con ❤️...) */
-    .footer-content { /* Asegúrate de que tienes esta clase para tu footer en app.py */
-        text-align: center;
-        padding: 20px 10px; /* Ajustar padding */
-        background-color: #f0f0f0; /* Un fondo sutil para el footer */
-        color: #555 !important; /* **¡FUERZA EL COLOR GRIS OSCURO!** */
-        font-size: 0.85em; /* Tamaño más pequeño en móvil */
-        line-height: 1.4;
-    }
-
-
-    /* ... (resto de tus ajustes para 768px) ... */
-}
-
-/* Estilos aplicados cuando el ancho de la pantalla es de 480px o menos */
-@media (max-width: 480px) {
-    /* ... (tus ajustes anteriores para 480px) ... */
-
-    /* Footer para móviles muy pequeños */
     .footer-content {
         font-size: 0.8em;
         padding: 15px 5px;
-        color: #555 !important; /* **¡FUERZA EL COLOR TAMBIÉN AQUÍ!** */
+        color: #444 !important;
     }
 }
