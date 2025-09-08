@@ -1,0 +1,115 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "nombre": "Shampoo Hidratante con Argán",
+            "descripcion": "Ideal para cabello seco y dañado.",
+            "detalles": "Fórmula enriquecida con aceite de argán, provitamina B5 y extracto de aloe vera. Restaura la hidratación, suavidad y brillo. Sin sulfatos ni parabenos.",
+            "precio": "$15.000",
+            "imagen": "images\\products\\shampoo.jpg"
+        },
+        {
+            "id": "a800c0d7-f88e-49ab-8251-8fab5322d1a3",
+            "nombre": "oleo de argan",
+            "descripcion": "descdripcion del oleo de argan",
+            "precio": "8000",
+            "imagen": "images/products\\c12b5997-72a2-4107-93ed-4cfa172342d5_serumargan.jpeg",
+            "detalles": "El serum de Argan THERAPY de Finisima Capilar previene y reduce la formación de dobles puntas y repara instantáneamente las ya dañadas, desde la primera aplicación. Sella la cutícula, otorgando nutrición, sedosidad y brillo."
+        }
+    ],
+    "banners": [
+        {
+            "img": "images/banner3.jpg",
+            "id": "a017afc8-8933-45a7-85b6-31ddc1b70257"
+        },
+        {
+            "img": "images/acondicionador.jpg",
+            "id": "b690e3ee-37ed-46e6-b7f5-1f60c2d0a329"
+        }
+    ],
+    "news": [
+        {
+            "id": "a90b8f41-a128-4f81-8078-43b9d08e5631",
+            "titulo": "Lanzamiento de la nueva línea 'Reparación Total'",
+            "contenido": "Descubre nuestra innovadora línea de productos formulada con tecnología de reparación molecular. Devuelve la vida a tu cabello en solo tres pasos. ¡Disponible ahora en nuestra tienda online!",
+            "fecha": "2025-05-20",
+            "imagen": "images/news/lanzamiento_reparacion.jpg"
+        }
+    ],
+    "testimonials": [],
+    "home_texts": {
+        "hero_title": "Finisima: La Esencia de un Cabello Radiante",
+        "hero_subtitle": "**Formulaciones exclusivas** con botánicos premium y tecnología avanzada para **resultados de salón en casa**.",
+        "hero_description": "Restauramos el brillo, la fuerza y la salud de tu cabello de manera sostenible, con un compromiso ético y productos Cruelty-Free.",
+        "section1_title": "¿Por Qué Elegir Finisima? Tu Cabello Lo Merece.",
+        "section1_description": "Descubre los pilares que hacen de Finisima la elección perfecta para un cuidado capilar excepcional.",
+        "section2_title": "Nuestras Líneas de Productos",
+        "section2_description": "Encuentra la solución ideal para cada necesidad de tu cabello con nuestras fórmulas exclusivas.",
+        "promo_title": "Línea Profesional Finisima: Resultados de Salón en Casa",
+        "promo_description": "Desarrollada con **activos de última generación** y **tecnología avanzada** para restaurar la salud y belleza de tu cabello. Ideal para cabellos exigentes que buscan un cuidado superior.",
+        "testimonials_title": "Lo Que Dicen Nuestros Clientes",
+        "testimonials_description": "La satisfacción de quienes eligen Finisima, es nuestra mayor recompensa.",
+        "lead_title": "¡No te Pierdas Nuestras Novedades y Ofertas Exclusivas!",
+        "lead_description": "Sé la primera en enterarte de nuevos lanzamientos, promociones y tips de cuidado capilar. ¡Únete a la comunidad Finisima!",
+        "bestsellers_title": "Nuestros Más Vendidos",
+        "bestsellers_description": "Descubre los favoritos de nuestros clientes, probados y amados por sus resultados."
+    },
+    "contact_info": {
+        "address": "Calle Ficticia 123, San Miguel de Tucumán, Argentina",
+        "phone": "+54 9 381 123-4567",
+        "email": "info@Finisimaproductoscapilares.com.ar",
+        "hours": "Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM<br>Domingos y Feriados: Cerrado",
+        "facebook_url": "https://facebook.com/Finisimaproductos",
+        "instagram_url": "https://instagram.com/Finisimaproductos"
+    },
+    "about_us": {
+        "about_description": "Somos una empresa argentina dedicada a la excelencia en el cuidado del cabello, con pasión por la belleza y el bienestar.",
+        "philosophy_title": "Nuestra Filosofía",
+        "philosophy_text": "En Finisima, creemos que un cabello hermoso es un reflejo de bienestar y confianza. Por eso, nos esforzamos en desarrollar productos innovadores que combinan la ciencia y la naturaleza para ofrecer soluciones efectivas para todo tipo de cabello, desde seco y dañado hasta graso y con color. Consulta la descripción de cada producto para encontrar el ideal para ti.",
+        "mission_text": "Nuestra misión es empoderar a nuestros clientes a través de la confianza que les brinda un cabello sano, fuerte y radiante. Trabajamos con pasión y compromiso, utilizando ingredientes de la más alta calidad y procesos de producción sostenibles y éticos, cuidando tanto a tu cabello como al planeta.",
+        "values_title": "Nuestros Valores Fundamentales",
+        "value1_title": "Calidad Inquebrantable:",
+        "value1_text": "Compromiso con la excelencia en cada formulación.",
+        "value2_title": "Innovación Constante:",
+        "value2_text": "Búsqueda y desarrollo de soluciones avanzadas y tecnologías de vanguardia.",
+        "value3_title": "Sostenibilidad y Ética:",
+        "value3_text": "Respeto por el medio ambiente y prácticas responsables en toda nuestra cadena de valor.",
+        "value4_title": "Pasión por la Belleza:",
+        "value4_text": "Amor por lo que hacemos y dedicación al bienestar de tu cabello."
+    },
+    "faqs": [
+        {
+            "q": "¿Son los productos Finisima aptos para todo tipo de cabello?",
+            "a": "Sí, nuestra línea ha sido cuidadosamente desarrollada para abarcar las necesidades de diversos tipos de cabello, desde seco y dañado hasta graso y con color. Consulta la descripción de cada producto para encontrar el ideal para ti."
+        },
+        {
+            "q": "¿Finisima Productos Capilares realiza envíos a todo el país?",
+            "a": "Actualmente realizamos envíos a todo el territorio argentino. Los costos y tiempos de entrega pueden variar según la provincia. Puedes consultar más detalles en nuestra sección de 'Envío y Devoluciones'."
+        },
+        {
+            "q": "¿Son los productos de Finisima cruelty-free y sostenibles?",
+            "a": "¡Absolutamente! En Finisima estamos comprometidos con la belleza ética. Nuestros productos son 100% cruelty-free (no testeados en animales) y nos esforzamos por utilizar ingredientes de origen sostenible y envases reciclables siempre que sea posible."
+        }
+    ],
+    "cta_texts": {
+        "banner_text": "Envíos Gratis en compras mayores a $100.000 - Entregas en el día en Gran San Miguel de Tucumán",
+        "cta_title": "¿Listo para transformar tu cabello?",
+        "cta_description": "Explora nuestra colección completa y encuentra todo lo que necesitas para un cuidado capilar excepcional.",
+        "cta_button_text": "Ver Todos los Productos"
+    },
+    "nav_menu": [
+        "Inicio",
+        "Peluquería",
+        "Novedades",
+        "Contacto",
+        "Sobre Nosotros"
+    ],
+    "general_settings": {
+        "page_title": "FINISIMA - PRODUCTOS CAPILARES",
+        "main_image_url": "images/logo_Finisima.png"
+    },
+    "page_settings": {
+        "title": "FINISIMA",
+        "main_image_url": "images/logo_Finisima.png"
+    }
+}
