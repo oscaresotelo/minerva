@@ -6,14 +6,14 @@
             "descripcion": "Ideal para cabello seco y dañado.",
             "detalles": "Fórmula enriquecida con aceite de argán, provitamina B5 y extracto de aloe vera. Restaura la hidratación, suavidad y brillo. Sin sulfatos ni parabenos.",
             "precio": "$15.000",
-            "imagen": "images\\products\\shampoo.jpg"
+            "imagen": "images/products/shampoo.jpg"
         },
         {
             "id": "a800c0d7-f88e-49ab-8251-8fab5322d1a3",
             "nombre": "oleo de argan",
             "descripcion": "descdripcion del oleo de argan",
             "precio": "8000",
-            "imagen": "images/products\\c12b5997-72a2-4107-93ed-4cfa172342d5_serumargan.jpeg",
+            "imagen": "images/products/c12b5997-72a2-4107-93ed-4cfa172342d5_serumargan.jpeg",
             "detalles": "El serum de Argan THERAPY de Finisima Capilar previene y reduce la formación de dobles puntas y repara instantáneamente las ya dañadas, desde la primera aplicación. Sella la cutícula, otorgando nutrición, sedosidad y brillo."
         }
     ],
