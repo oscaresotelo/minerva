@@ -1,364 +1,137 @@
-/* Importar la fuente de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-/* Reset y estilos generales */
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
     margin: 0;
     padding: 0;
 }
 
-html, body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f7f9fc;
-}
-
-/* --- Banner Superior de Anuncios --- */
-.main-banner {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* --- Estilos del Header --- */
+/* --- HEADER --- */
 .header-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.search-and-cart-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-grow: 1;
-    justify-content: flex-end;
+.header-container img {
+    max-height: 60px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 15px;
 }
 
 .user-menu-container {
-    white-space: nowrap;
-}
-
-.user-menu-container span {
+    font-weight: bold;
     font-size: 16px;
-    font-weight: bold;
-}
-
-.user-menu-container a {
-    color: #333;
-    text-decoration: none;
-}
-
-.user-menu-container a:hover {
-    color: #008C82;
-}
-
-/* --- Sidebar de Navegación --- */
-[data-testid="stSidebar"] {
-    background-color: #fff;
-    padding: 20px;
-}
-
-.sidebar-category-menu h3 {
-    color: #333;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.sidebar .stButton button {
-    background-color: transparent;
-    color: #333;
-    border: none;
-    text-align: left;
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    text-transform: none;
-}
-
-.sidebar .stButton button:hover {
-    color: #008C82;
-}
-
-/* --- Secciones y Títulos --- */
-.page-title, .section-title {
-    color: #333;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding: 0 20px;
-}
-
-.section-description {
-    color: #666;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 1.1em;
-}
-
-/* Espaciadores */
-.section-spacer {
-    margin-top: 50px;
-}
-
-.section-spacer-small {
-    margin-top: 30px;
-}
-
-/* --- Hero Section (Home) --- */
-.hero-section {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    gap: 40px;
-}
-
-.hero-text-content {
-    flex: 1;
-}
-
-.hero-title {
-    font-size: 3em;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #333;
-}
-
-.hero-subtitle {
-    font-size: 1.2em;
-    font-weight: 400;
-    margin-top: 15px;
-    color: #666;
-}
-
-.hero-description {
-    margin-top: 20px;
-    color: #777;
-    line-height: 1.5;
-}
-
-/* --- Tarjetas de Producto --- */
-.product-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s;
-    height: 100%;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-card img {
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.product-card h4 {
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.product-price {
-    color: #008C82;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* --- Beneficios y Promociones --- */
-.benefit-card {
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.benefit-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.promo-text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.promo-title {
-    font-size: 2em;
-    color: #008C82;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.promo-description {
-    color: #666;
-    line-height: 1.5;
-}
-
-/* --- Testimonios --- */
-.testimonial-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 25px;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.testimonial-quote {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: #333;
     text-align: right;
 }
 
-/* --- Formulario de Lead Capture --- */
-.lead-form-section {
-    background-color: #333;
-    color: white;
-    padding: 40px;
-    border-radius: 10px;
+/* --- MENÚ DE NAVEGACIÓN --- */
+.desktop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    position: sticky;
+    top: 70px; /* debajo del header */
+    z-index: 90;
+}
+
+.desktop-nav .nav-item {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.desktop-nav .nav-item:hover {
+    color: #ff4081;
+}
+
+.desktop-nav .active {
+    color: #ff4081;
+    font-weight: 600;
+}
+
+/* --- PRODUCTOS --- */
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px;
     text-align: center;
+    background: #fff;
+    margin-bottom: 25px;
+    transition: box-shadow 0.3s ease;
 }
 
-.lead-form-section .section-title,
-.lead-form-section .section-description {
-    color: white;
+.product-card:hover {
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
 
-.lead-form-section .stTextInput input {
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
+.product-card h4 {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.lead-form-section .stCheckbox label {
-    color: white;
-}
-
-.lead-form-section .stFormSubmitButton button {
-    background-color: #008C82;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+.product-price {
+    color: #0073e6;
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 15px;
+    margin: 10px 0;
 }
 
-/* --- Botón de Llamada a la Acción (CTA) Final --- */
-.cta-banner-final {
-    background-color: #008C82;
-    color: white;
-    text-align: center;
-    padding: 50px;
-    border-radius: 10px;
-}
-
-.cta-title {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.cta-description {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #f0f0f0;
-}
-
-.cta-button {
-    background-color: white;
-    color: #008C82;
-    padding: 15px 30px;
+/* Botón negro para añadir al carrito */
+.stButton > button {
+    background: black !important;
+    color: white !important;
+    border-radius: 25px;
+    padding: 8px 20px;
     border: none;
-    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
-.cta-button:hover {
-    background-color: #f0f0f0;
+.stButton > button:hover {
+    background: #333 !important;
 }
 
-/* --- Secciones de Contenido (Sobre Nosotros, Contacto, Novedades) --- */
-.about-section-card, .contact-form-card, .contact-info-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+/* --- FOOTER --- */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 40px;
+    text-align: center;
 }
 
-.news-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    display: flex;
-    gap: 20px;
+.footer h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.news-card img {
-    border-radius: 8px;
+.footer p, 
+.footer a {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: none;
 }
 
-/* --- Responsive Design para Móviles --- */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        padding: 10px 20px;
-    }
-    
-    .search-and-cart-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-
-    .user-menu-container {
-        margin-top: 10px;
-        text-align: center;
-    }
-    
-    .hero-section {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .page-title, .section-title {
-        font-size: 1.8em;
-    }
-
-    .section-description {
-        padding: 0 10px;
-    }
-    
-    .news-card {
-        flex-direction: column;
-    }
+.footer a:hover {
+    color: #ff4081;
 }

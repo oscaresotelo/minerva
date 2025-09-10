@@ -98,11 +98,9 @@
         "cta_button_text": "Ver Todos los Productos"
     },
     "nav_menu": [
-        "Inicio",
-        "Peluquería",
         "Novedades",
-        "Contacto",
-        "Sobre Nosotros"
+        "Peluquería",
+        "Contacto"
     ],
     "general_settings": {
         "page_title": "FINISIMA - PRODUCTOS CAPILARES",
